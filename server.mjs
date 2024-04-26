@@ -5,6 +5,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 
 import blockRoutes from './routes/blockRoutes.mjs';
+import errorHandler from './middleware/errorHandler.mjs';
+import ErrorResponseModel from './utils/ErrorResponseModel.mjs';
 
 global.__appdir = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: './config/config.env' });
@@ -16,13 +18,13 @@ app.use(express.json());
 
 app.use('/blocks', blockRoutes);
 
-app.use('*', (req, res, next) => {
-  next();
+app.all('*', (req, res, next) => {
+  next(
+    new ErrorResponseModel(`Can't find the resource at ${req.originalUrl}`, 404)
+  );
 });
 
-app.use((req, res, next) => {
-  res.json({ msg: 'Din tönt!! Du gjorde helt fel!' });
-});
+app.use(errorHandler);
 
 app.listen(PORT, () =>
   console.log(

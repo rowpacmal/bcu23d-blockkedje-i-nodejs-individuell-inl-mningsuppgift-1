@@ -1,12 +1,13 @@
 import Block from '../models/Block.mjs';
 import FileHandler from '../utils/FileHandler.mjs';
+import ResponseModel from '../utils/ResponseModel.mjs';
 
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const blocks = require('../data/blocks.json');
 
 export const getAllBlocks = (req, res, next) => {
-  res.json({ items: blocks.length, data: blocks });
+  res.status(200).json(new ResponseModel({ statusCode: 200, data: blocks }));
 };
 
 export const getBlockByIndex = (req, res, next) => {
@@ -16,7 +17,7 @@ export const getBlockByIndex = (req, res, next) => {
     return next();
   }
 
-  res.json({ data: block });
+  res.status(200).json(new ResponseModel({ statusCode: 200, data: block }));
 };
 
 export const createNewBlock = (req, res, next) => {
@@ -30,5 +31,5 @@ export const createNewBlock = (req, res, next) => {
 
   new FileHandler('data', 'blocks.json').write(blocks);
 
-  res.json({ data: block });
+  res.status(201).json(new ResponseModel({ statusCode: 201, data: block }));
 };

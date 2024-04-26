@@ -1,8 +1,12 @@
-import express from 'express';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
 import dotenv from 'dotenv';
+import express from 'express';
 
 import blockRoutes from './routes/blockRoutes.mjs';
 
+global.__appdir = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: './config/config.env' });
 
 const app = express();

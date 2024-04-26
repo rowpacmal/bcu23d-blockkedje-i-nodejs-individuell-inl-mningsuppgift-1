@@ -6,7 +6,7 @@ const Block = class {
     this.timestamp = new Date().getTime();
     this.data = data;
     this.previousHash = previousHash;
-    this.nonce = 0; // Math.random() * Math.pow(10, 18)
+    this.nonce = 0;
     this.hash = this.calculateHash();
   }
 

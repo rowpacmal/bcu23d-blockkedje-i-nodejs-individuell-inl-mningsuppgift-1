@@ -1,7 +1,7 @@
 import express from 'express';
 import {
   getAllBlocks,
-  getBlockByIndex,
+  getBlockByNumber,
   createNewBlock,
 } from '../controllers/blockController.mjs';
 
@@ -9,6 +9,6 @@ const router = express.Router();
 
 router.route('/').get(getAllBlocks).post(createNewBlock);
 
-router.route('/:index').get(getBlockByIndex);
+router.route('/:index').get(getBlockByNumber);
 
 export default router;

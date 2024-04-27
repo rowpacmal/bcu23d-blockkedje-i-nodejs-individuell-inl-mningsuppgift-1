@@ -4,13 +4,24 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import express from 'express';
 
+import ErrorResponseModel from './utils/ErrorResponseModel.mjs';
+import FileHandler from './utils/FileHandler.mjs';
+
 import blockRoutes from './routes/blockRoutes.mjs';
 import logHandler from './middleware/logHandler.mjs';
 import errorHandler from './middleware/errorHandler.mjs';
-import ErrorResponseModel from './utils/ErrorResponseModel.mjs';
+
+import { createRequire } from 'module';
+import Blockchain from './models/Blockchain.mjs';
+const require = createRequire(import.meta.url);
+const blockchainCoder = require('./data/blockchain.json');
 
 global.__appdir = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: './config/config.env' });
+
+if (!blockchainCoder.blocks) {
+  new FileHandler('data', 'blockchain.json').write(new Blockchain(3));
+}
 
 const app = express();
 const PORT = process.env.PORT || 5000;

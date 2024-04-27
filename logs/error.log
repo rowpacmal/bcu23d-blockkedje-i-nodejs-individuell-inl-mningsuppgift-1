@@ -6,3 +6,59 @@
   Success:false
   Status: 404 (Not Found)
   Error: Can't find the resource at /block
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 11:35:05
+  Success:undefined
+  Status: undefined (undefined)
+  Error: block is not defined
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 11:35:26
+  Success:undefined
+  Status: undefined (undefined)
+  Error: block is not defined
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 11:35:54
+  Success:undefined
+  Status: undefined (undefined)
+  Error: block is not defined
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 11:38:19
+  Success:undefined
+  Status: undefined (undefined)
+  Error: block is not defined
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 11:39:34
+  Success:undefined
+  Status: undefined (undefined)
+  Error: block is not defined
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 11:39:49
+  Success:undefined
+  Status: undefined (undefined)
+  Error: block is not defined
+
+  Method: GET
+  Url: /blocks/9
+  Date: 2024-04-27
+  Time: 11:47:05
+  Success:false
+  Status: 404 (Not Found)
+  Error: Can't find the block with index [9]

@@ -1,35 +1,43 @@
 import Block from '../models/Block.mjs';
+import Blockchain from '../models/Blockchain.mjs';
 import FileHandler from '../utils/FileHandler.mjs';
 import ResponseModel from '../utils/ResponseModel.mjs';
+import ErrorResponseModel from '../utils/ErrorResponseModel.mjs';
 
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const blocks = require('../data/blocks.json');
+const blockchainCoder = require('../data/blockchain.json');
+
+const blockchain = new Blockchain(blockchainCoder.difficulty);
+blockchain.blocks = blockchainCoder.blocks;
 
 export const getAllBlocks = (req, res, next) => {
-  res.status(200).json(new ResponseModel({ statusCode: 200, data: blocks }));
+  res
+    .status(200)
+    .json(new ResponseModel({ statusCode: 200, data: blockchain.blocks }));
 };
 
-export const getBlockByIndex = (req, res, next) => {
-  const block = blocks.find((b) => b.index === +req.params.index);
+export const getBlockByNumber = (req, res, next) => {
+  const block = blockchain.blocks.find((b) => b.index === +req.params.index);
 
   if (!block) {
-    return next();
+    return next(
+      new ErrorResponseModel(
+        `Can't find the block with index [${req.params.index}]`,
+        404
+      )
+    );
   }
 
   res.status(200).json(new ResponseModel({ statusCode: 200, data: block }));
 };
 
 export const createNewBlock = (req, res, next) => {
-  const block = new Block(
-    blocks.length + 1,
-    { ...req.body },
-    blocks.length > 0 ? blocks[blocks.length - 1].hash : null
-  );
+  blockchain.createNewBlock(new Block(req.body));
 
-  blocks.push(block);
+  const block = blockchain.obtainLatestBlock();
 
-  new FileHandler('data', 'blocks.json').write(blocks);
+  new FileHandler('data', 'blockchain.json').write(blockchain);
 
   res.status(201).json(new ResponseModel({ statusCode: 201, data: block }));
 };

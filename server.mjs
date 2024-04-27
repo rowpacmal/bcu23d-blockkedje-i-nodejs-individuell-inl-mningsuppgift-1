@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 
 import blockRoutes from './routes/blockRoutes.mjs';
+import logHandler from './middleware/logHandler.mjs';
 import errorHandler from './middleware/errorHandler.mjs';
 import ErrorResponseModel from './utils/ErrorResponseModel.mjs';
 
@@ -15,6 +16,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+
+if (process.env.NODE_ENV === 'development') app.use(logHandler);
 
 app.use('/blocks', blockRoutes);
 

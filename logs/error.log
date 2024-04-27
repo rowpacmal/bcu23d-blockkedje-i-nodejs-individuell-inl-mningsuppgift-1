@@ -1,0 +1,8 @@
+
+  Method: GET
+  Url: /block
+  Date: 2024-04-27
+  Time: 10:08:58
+  Success:false
+  Status: 404 (Not Found)
+  Error: Can't find the resource at /block

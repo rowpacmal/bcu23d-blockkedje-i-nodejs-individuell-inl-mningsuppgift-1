@@ -9,16 +9,16 @@ const require = createRequire(import.meta.url);
 const blockchainCoder = require('../data/blockchain.json');
 
 const blockchain = new Blockchain(blockchainCoder.difficulty);
-blockchain.blocks = blockchainCoder.blocks;
+blockchain.chain = blockchainCoder.chain;
 
 export const getAllBlocks = (req, res, next) => {
   res
     .status(200)
-    .json(new ResponseModel({ statusCode: 200, data: blockchain.blocks }));
+    .json(new ResponseModel({ statusCode: 200, data: blockchain.chain }));
 };
 
-export const getBlockByNumber = (req, res, next) => {
-  const block = blockchain.blocks.find((b) => b.index === +req.params.index);
+export const getBlockByIndex = (req, res, next) => {
+  const block = blockchain.chain.find((b) => b.index === +req.params.index);
 
   if (!block) {
     return next(
@@ -44,12 +44,9 @@ export const getLatestBlock = (req, res, next) => {
   res.status(200).json(new ResponseModel({ statusCode: 200, data: block }));
 };
 
-export const createNewBlock = (req, res, next) => {
-  // blockchain.createNewBlock(new Block(req.body));
-  // const block = blockchain.obtainLatestBlock();
-
-  const block = blockchain.createNewBlock(new Block(req.body));
-  blockchain.blocks.push(block);
+export const createBlock = (req, res, next) => {
+  blockchain.createNewBlock(new Block(req.body));
+  const block = blockchain.obtainLatestBlock();
 
   new FileHandler('data', 'blockchain.json').write(blockchain);
 

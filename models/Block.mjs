@@ -25,7 +25,7 @@ const Block = class {
     return hash.digest('hex');
   }
 
-  proofOfWork(difficulty) {
+  mineBlock(difficulty) {
     while (
       this.hash.substring(0, difficulty) !== Array(difficulty + 1).join('0')
     ) {

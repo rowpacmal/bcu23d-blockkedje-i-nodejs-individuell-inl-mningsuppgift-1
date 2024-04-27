@@ -6,10 +6,10 @@ const require = createRequire(import.meta.url);
 const blockchainCoder = require('../data/blockchain.json');
 
 const blockchain = new Blockchain(blockchainCoder.difficulty);
-blockchain.blocks = blockchainCoder.blocks;
+blockchain.chain = blockchainCoder.chain;
 
 const validateBlockchain = (req, res, next) => {
-  const validation = blockchain.validateBlockchain();
+  const validation = blockchain.isChainValid();
 
   if (!validation.status)
     return next(

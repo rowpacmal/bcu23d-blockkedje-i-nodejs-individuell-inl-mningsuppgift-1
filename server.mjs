@@ -20,8 +20,8 @@ const blockchainCoder = require('./data/blockchain.json');
 global.__appdir = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: './config/config.env' });
 
-if (!blockchainCoder.blocks) {
-  new FileHandler('data', 'blockchain.json').write(new Blockchain(3));
+if (!blockchainCoder.chain) {
+  new FileHandler('data', 'blockchain.json').write(new Blockchain(3, 10));
 }
 
 const app = express();

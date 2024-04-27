@@ -1,37 +1,15 @@
 {
-  "blocks": [
+  "difficulty": 3,
+  "miningReward": 10,
+  "chain": [
     {
       "index": 0,
-      "timestamp": 1714218349109,
+      "timestamp": 1714228724679,
       "data": "Initial block in the chain",
       "previousHash": null,
       "nonce": 0,
-      "hash": "03ee1d23c5d6a0e0b61c2ff8511f7fcb735f5624f2df4a91dc3f6d357b7ac996"
-    },
-    {
-      "index": 1,
-      "timestamp": 1714218400611,
-      "data": {
-        "sender": "Sender",
-        "recipient": "Recipient",
-        "quantity": 10
-      },
-      "previousHash": "03ee1d23c5d6a0e0b61c2ff8511f7fcb735f5624f2df4a91dc3f6d357b7ac996",
-      "nonce": 12425,
-      "hash": "000d7c223fb46482c19a608bf1a4be169a70ebfe549a0d0f26052adf931cc538"
-    },
-    {
-      "index": 2,
-      "timestamp": 1714220474602,
-      "data": {
-        "sender": "Sender",
-        "recipient": "Recipient",
-        "quantity": 10
-      },
-      "previousHash": "000d7c223fb46482c19a608bf1a4be169a70ebfe549a0d0f26052adf931cc538",
-      "nonce": 8636,
-      "hash": "00053ef8068e13067f3abc7acbc71bdb28ee7c1e54df32053ac5b80a3fc375aa"
+      "hash": "eced1c18c42e94c5502818867f918570a4c2451fb1fabbe318bdea08a6c7fcd2"
     }
   ],
-  "difficulty": 3
+  "pendingData": []
 }

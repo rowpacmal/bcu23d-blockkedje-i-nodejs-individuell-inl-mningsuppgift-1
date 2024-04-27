@@ -32,10 +32,24 @@ export const getBlockByNumber = (req, res, next) => {
   res.status(200).json(new ResponseModel({ statusCode: 200, data: block }));
 };
 
-export const createNewBlock = (req, res, next) => {
-  blockchain.createNewBlock(new Block(req.body));
-
+export const getLatestBlock = (req, res, next) => {
   const block = blockchain.obtainLatestBlock();
+
+  if (!block) {
+    return next(
+      new ErrorResponseModel(`Can't find the latest block in the chain`, 404)
+    );
+  }
+
+  res.status(200).json(new ResponseModel({ statusCode: 200, data: block }));
+};
+
+export const createNewBlock = (req, res, next) => {
+  // blockchain.createNewBlock(new Block(req.body));
+  // const block = blockchain.obtainLatestBlock();
+
+  const block = blockchain.createNewBlock(new Block(req.body));
+  blockchain.blocks.push(block);
 
   new FileHandler('data', 'blockchain.json').write(blockchain);
 

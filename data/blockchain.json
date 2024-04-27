@@ -2,83 +2,35 @@
   "blocks": [
     {
       "index": 0,
-      "timestamp": 1714210974170,
+      "timestamp": 1714218349109,
       "data": "Initial block in the chain",
       "previousHash": null,
       "nonce": 0,
-      "hash": "3280ecaa8f25c268f6664696e65f9d178ec0987004d34cbda5a72927b25a5d99"
+      "hash": "03ee1d23c5d6a0e0b61c2ff8511f7fcb735f5624f2df4a91dc3f6d357b7ac996"
     },
     {
       "index": 1,
-      "timestamp": 1714210985108,
+      "timestamp": 1714218400611,
       "data": {
         "sender": "Sender",
         "recipient": "Recipient",
         "quantity": 10
       },
-      "previousHash": "3280ecaa8f25c268f6664696e65f9d178ec0987004d34cbda5a72927b25a5d99",
-      "nonce": 7266,
-      "hash": "00047f816e71eb706491f8f74986cf266d16a3988e1d95aa6a4368c50a507a6e"
+      "previousHash": "03ee1d23c5d6a0e0b61c2ff8511f7fcb735f5624f2df4a91dc3f6d357b7ac996",
+      "nonce": 12425,
+      "hash": "000d7c223fb46482c19a608bf1a4be169a70ebfe549a0d0f26052adf931cc538"
     },
     {
       "index": 2,
-      "timestamp": 1714210987453,
+      "timestamp": 1714220474602,
       "data": {
         "sender": "Sender",
         "recipient": "Recipient",
         "quantity": 10
       },
-      "previousHash": "00047f816e71eb706491f8f74986cf266d16a3988e1d95aa6a4368c50a507a6e",
-      "nonce": 982,
-      "hash": "00045173f4eb098c059a79f56581b2e9f7a08351cfed3fd6520426e8bfc35cf4"
-    },
-    {
-      "index": 3,
-      "timestamp": 1714210988617,
-      "data": {
-        "sender": "Sender",
-        "recipient": "Recipient",
-        "quantity": 10
-      },
-      "previousHash": "00045173f4eb098c059a79f56581b2e9f7a08351cfed3fd6520426e8bfc35cf4",
-      "nonce": 4547,
-      "hash": "000054ea5a13ee4720ebafe20b7faf0c043860ea5eb450caba1d3b8603eb0e54"
-    },
-    {
-      "index": 4,
-      "timestamp": 1714211029406,
-      "data": {
-        "sender": "Sender",
-        "recipient": "Recipient",
-        "quantity": 10
-      },
-      "previousHash": "000054ea5a13ee4720ebafe20b7faf0c043860ea5eb450caba1d3b8603eb0e54",
-      "nonce": 3373,
-      "hash": "000732ce8245edc882d213de155e0ec812c73b6fee4689ee2d0e00f00cae434c"
-    },
-    {
-      "index": 5,
-      "timestamp": 1714211030896,
-      "data": {
-        "sender": "Sender",
-        "recipient": "Recipient",
-        "quantity": 10
-      },
-      "previousHash": "000732ce8245edc882d213de155e0ec812c73b6fee4689ee2d0e00f00cae434c",
-      "nonce": 1280,
-      "hash": "000b23992f04ecaf355b94d9cfffa333774dcf6acf486317662bb1d48b73f559"
-    },
-    {
-      "index": 6,
-      "timestamp": 1714211032049,
-      "data": {
-        "sender": "Sender",
-        "recipient": "Recipient",
-        "quantity": 10
-      },
-      "previousHash": "000b23992f04ecaf355b94d9cfffa333774dcf6acf486317662bb1d48b73f559",
-      "nonce": 9085,
-      "hash": "0003b2450cda7a5d98e2dcfed9bfe4c4be9c6f605aba3da43b11782e587e72bb"
+      "previousHash": "000d7c223fb46482c19a608bf1a4be169a70ebfe549a0d0f26052adf931cc538",
+      "nonce": 8636,
+      "hash": "00053ef8068e13067f3abc7acbc71bdb28ee7c1e54df32053ac5b80a3fc375aa"
     }
   ],
   "difficulty": 3

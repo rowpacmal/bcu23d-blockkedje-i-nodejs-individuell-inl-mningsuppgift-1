@@ -17,20 +17,34 @@ const Blockchain = class {
   createNewBlock(newBlock) {
     newBlock.index = this.blocks.length;
     newBlock.previousHash = this.obtainLatestBlock().hash;
+    // newBlock.hash = newBlock.calculateHash();
     newBlock.proofOfWork(this.difficulty);
-    this.blocks.push(newBlock);
+
+    // this.blocks.push(newBlock);
+    return newBlock;
   }
 
   validateBlockchain() {
     for (let i = 1; i < this.blocks.length; i++) {
       const currentBlock = this.blocks[i];
+      Object.setPrototypeOf(currentBlock, Block.prototype);
+
       const previousBlock = this.blocks[i - 1];
 
-      if (currentBlock.hash !== currentBlock.calculateHash()) return false;
-      if (currentBlock.previousHash !== previousBlock.hash) return false;
+      if (currentBlock.hash !== currentBlock.calculateHash())
+        return {
+          status: false,
+          block: currentBlock.index,
+        };
+
+      if (currentBlock.previousHash !== previousBlock.hash)
+        return {
+          status: false,
+          block: previousBlock.index,
+        };
     }
 
-    return true;
+    return { status: true };
   }
 };
 

@@ -4,15 +4,16 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import express from 'express';
 
+import Blockchain from './models/Blockchain.mjs';
 import ErrorResponseModel from './utils/ErrorResponseModel.mjs';
 import FileHandler from './utils/FileHandler.mjs';
 
+import validateBlockchain from './middleware/validateBlockchain.mjs';
 import blockRoutes from './routes/blockRoutes.mjs';
 import logHandler from './middleware/logHandler.mjs';
 import errorHandler from './middleware/errorHandler.mjs';
 
 import { createRequire } from 'module';
-import Blockchain from './models/Blockchain.mjs';
 const require = createRequire(import.meta.url);
 const blockchainCoder = require('./data/blockchain.json');
 
@@ -29,6 +30,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'development') app.use(logHandler);
+
+app.use(validateBlockchain);
 
 app.use('/blocks', blockRoutes);
 

@@ -6,7 +6,7 @@ const errorHandler = (err, req, res, next) => {
   Url: ${req.originalUrl}
   Date: ${new Date().toLocaleDateString('sv-SE')}
   Time: ${new Date().toLocaleTimeString('sv-SE')}
-  Success:${err.success}
+  Success: ${err.success}
   Status: ${err.statusCode} (${err.status})
   Error: ${err.message}`);
 

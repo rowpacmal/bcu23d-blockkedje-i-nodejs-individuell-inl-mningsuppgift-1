@@ -12,7 +12,7 @@ Applikationen ska byggas som ett REST API med endpoints för att kunna skapa blo
 - [ ] Felhantering enligt “best practice” ska användas(det som vi gått igenom)
 - [ ] Blockkedjan ska skrivas till en json fil så att den finns även efter omstart av servern.
 - [ ] Loggning av fel ska skrivas till en fysisk fellogg
-- [ ] ES6 moduler ska användas istället för CommonJS moduler.
+- [x] ES6 moduler ska användas istället för CommonJS moduler.
 - [ ] Skapandet av block ska ske test drivet(TDD)
 - [ ] Varje block måste verifieras och valideras(“Proof Of Work”)
 

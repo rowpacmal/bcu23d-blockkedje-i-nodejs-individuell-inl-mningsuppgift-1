@@ -62,3 +62,225 @@
   Success:false
   Status: 404 (Not Found)
   Error: Can't find the block with index [9]
+
+  Method: GET
+  Url: /blocks/lates
+  Date: 2024-04-27
+  Time: 13:10:53
+  Success:false
+  Status: 404 (Not Found)
+  Error: Can't find the block with index [lates]
+
+  Method: POST
+  Url: /block
+  Date: 2024-04-27
+  Time: 13:14:46
+  Success:false
+  Status: 404 (Not Found)
+  Error: Can't find the resource at /block
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:32:01
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:34:15
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:35:54
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:36:26
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:36:49
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:37:05
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:37:23
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:39:23
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:41:10
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:42:08
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:46:43
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:48:16
+  Success:false
+  Status: 500 (Internal Server Error)
+  Error: Something is wrong with the blockchain
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:51:39
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 13:59:47
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:01:58
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:04:47
+  Success:undefined
+  Status: undefined (undefined)
+  Error: Block.prototype is not a constructor
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:06:04
+  Success:undefined
+  Status: undefined (undefined)
+  Error: currentBlock.calculateHash is not a function
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:12:10
+  Success:false
+  Status: 500 (Internal Server Error)
+  Error: Something is wrong with the blockchain
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:19:32
+  Success:false
+  Status: 500 (Internal Server Error)
+  Error: Block [1] data has been tampered with!
+
+  Method: GET
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:19:44
+  Success:false
+  Status: 500 (Internal Server Error)
+  Error: Block [1]'s data has been tampered with!
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:19:54
+  Success:false
+  Status: 500 (Internal Server Error)
+  Error: Block [1]'s data has been tampered with!
+
+  Method: POST
+  Url: /blocks
+  Date: 2024-04-27
+  Time: 14:20:41
+  Success:false
+  Status: 500 (Internal Server Error)
+  Error: Block with index [1] has been tampered with!
+
+  Method: GET
+  Url: /block
+  Date: 2024-04-27
+  Time: 14:30:35
+  Success: false
+  Status: 404 (Not Found)
+  Error: Can't find the resource at /block
+
+---
+
+  Method: GET
+  Url: /block
+  Date: 2024-04-27
+  Time: 14:30:35
+  Success: false
+  Status: 404 (Not Found)
+  Error: Can't find the resource at /block
+
+---
+
+  Method: GET
+  Url: /block
+  Date: 2024-04-27
+  Time: 14:30:36
+  Success: false
+  Status: 404 (Not Found)
+  Error: Can't find the resource at /block
+
+---

@@ -1,6 +1,5 @@
 {
   "difficulty": 3,
-  "miningReward": 10,
   "chain": [
     {
       "index": 0,
@@ -9,6 +8,18 @@
       "previousHash": null,
       "nonce": 0,
       "hash": "eced1c18c42e94c5502818867f918570a4c2451fb1fabbe318bdea08a6c7fcd2"
+    },
+    {
+      "index": 1,
+      "timestamp": 1714281761908,
+      "data": {
+        "sender": "Sender",
+        "recipient": "Recipient",
+        "quantity": 10
+      },
+      "previousHash": "eced1c18c42e94c5502818867f918570a4c2451fb1fabbe318bdea08a6c7fcd2",
+      "nonce": 665,
+      "hash": "0005872790f28dc558ac7efcbb9232150569a7c67db648f31debb5baa9b0cf26"
     }
   ],
   "pendingData": []

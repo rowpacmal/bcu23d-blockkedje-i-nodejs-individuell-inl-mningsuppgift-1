@@ -2,9 +2,12 @@ import Block from './Block.mjs';
 import Transaction from './Transaction.mjs';
 
 const Blockchain = class {
+  #difficulty;
+  #miningReward;
+
   constructor(difficulty, miningReward) {
-    this.difficulty = difficulty;
-    this.miningReward = miningReward;
+    this.#difficulty = difficulty;
+    this.#miningReward = miningReward;
     this.chain = [this.createGenesisBlock()];
     this.pendingData = [];
   }
@@ -16,7 +19,7 @@ const Blockchain = class {
   createNewBlock(newBlock) {
     newBlock.index = this.chain.length;
     newBlock.previousHash = this.obtainLatestBlock().hash;
-    newBlock.mineBlock(this.difficulty);
+    newBlock.mineBlock(this.#difficulty);
 
     return newBlock;
   }
@@ -49,7 +52,7 @@ const Blockchain = class {
 
     this.chain.push(block);
     this.pendingData = [
-      new Transaction(null, miningAddress, this.miningReward),
+      new Transaction(null, miningAddress, this.#miningReward),
     ];
   }
 

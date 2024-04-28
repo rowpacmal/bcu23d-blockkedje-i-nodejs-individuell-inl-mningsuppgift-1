@@ -45,8 +45,8 @@ export const getLatestBlock = (req, res, next) => {
 };
 
 export const createBlock = (req, res, next) => {
-  blockchain.createNewBlock(new Block(req.body));
-  const block = blockchain.obtainLatestBlock();
+  const block = blockchain.createNewBlock(new Block(req.body));
+  blockchain.chain.push(block);
 
   new FileHandler('data', 'blockchain.json').write(blockchain);
 

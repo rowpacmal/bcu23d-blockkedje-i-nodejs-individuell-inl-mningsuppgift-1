@@ -1,15 +1,1 @@
-{
-  "difficulty": 3,
-  "miningReward": 10,
-  "chain": [
-    {
-      "index": 0,
-      "timestamp": 1714228724679,
-      "data": "Initial block in the chain",
-      "previousHash": null,
-      "nonce": 0,
-      "hash": "eced1c18c42e94c5502818867f918570a4c2451fb1fabbe318bdea08a6c7fcd2"
-    }
-  ],
-  "pendingData": []
-}
+{}

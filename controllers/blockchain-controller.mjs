@@ -1,7 +1,7 @@
 import { blockchain } from '../startup.mjs';
 import FileHandler from '../utils/FileHandler.mjs';
 
-export const getBlockchain = (req, res, next) => {
+const getBlockchain = (req, res, next) => {
   res.status(200).json({
     success: true,
     status: '200 OK',
@@ -9,7 +9,7 @@ export const getBlockchain = (req, res, next) => {
   });
 };
 
-export const getBlockByIndex = (req, res, next) => {
+const getBlockByIndex = (req, res, next) => {
   res.status(200).json({
     success: true,
     status: '200 OK',
@@ -17,13 +17,13 @@ export const getBlockByIndex = (req, res, next) => {
   });
 };
 
-export const getLatestBlock = (req, res, next) => {
+const getLatestBlock = (req, res, next) => {
   res
     .status(200)
     .json({ success: true, status: '200 OK', data: blockchain.getLastBlock() });
 };
 
-export const mineBlock = (req, res, next) => {
+const mineBlock = (req, res, next) => {
   const previousHash = blockchain.getLastBlock().hash;
   const data = req.body;
   const { timestamp, nonce, difficulty } = blockchain.proofOfWork(
@@ -51,3 +51,5 @@ export const mineBlock = (req, res, next) => {
 
   res.status(201).json({ success: true, status: '201 Created', data: block });
 };
+
+export { getBlockchain, getBlockByIndex, getLatestBlock, mineBlock };

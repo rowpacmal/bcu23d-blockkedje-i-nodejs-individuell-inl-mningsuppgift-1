@@ -1,18 +1,17 @@
-import { writeFileSync } from 'fs';
+import { appendFileSync, writeFileSync } from 'fs';
 import path from 'path';
 
 const FileHandler = class {
   constructor(folder, filename) {
-    this.folder = folder;
-    this.filename = filename;
+    this.path = path.join(__appdir, folder, filename);
+  }
+
+  append(data) {
+    appendFileSync(this.path, `${data}\n=====`, 'utf8');
   }
 
   write(data) {
-    writeFileSync(
-      path.join(__appdir, this.folder, this.filename),
-      JSON.stringify(data, null, 2),
-      'utf8'
-    );
+    writeFileSync(this.path, JSON.stringify(data, null, 2), 'utf8');
   }
 };
 

@@ -1,4 +1,4 @@
-const Response = class {
+const ServerResponse = class {
   constructor({ status, error, data }) {
     this.success = status >= 200 && status <= 299;
     this.status = status;
@@ -8,4 +8,4 @@ const Response = class {
   }
 };
 
-export default Response;
+export default ServerResponse;

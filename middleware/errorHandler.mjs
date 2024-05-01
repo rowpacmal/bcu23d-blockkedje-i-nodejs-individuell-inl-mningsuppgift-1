@@ -1,4 +1,4 @@
-import Response from '../utils/Response.mjs';
+import ServerResponse from '../utils/ServerResponse.mjs';
 import FileHandler from '../utils/FileHandler.mjs';
 
 const errorHandler = (err, req, res, next) => {
@@ -17,7 +17,7 @@ const errorHandler = (err, req, res, next) => {
 
   res
     .status(err.status)
-    .json(new Response({ status: err.status, error: err.message }));
+    .json(new ServerResponse({ status: err.status, error: err.message }));
 };
 
 export default errorHandler;

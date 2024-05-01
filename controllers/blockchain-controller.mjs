@@ -1,4 +1,5 @@
 import { blockchain } from '../startup.mjs';
+import FileHandler from '../utils/FileHandler.mjs';
 
 export const getBlockchain = (req, res, next) => {
   res.status(200).json({
@@ -45,6 +46,8 @@ export const mineBlock = (req, res, next) => {
     data,
     difficulty
   );
+
+  new FileHandler('data', 'blockchain.json').write(blockchain);
 
   res.status(201).json({ success: true, status: '201 Created', data: block });
 };

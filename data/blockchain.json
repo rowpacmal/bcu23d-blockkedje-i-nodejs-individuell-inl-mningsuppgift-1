@@ -1,0 +1,48 @@
+{
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": 1714553041559,
+      "previousHash": null,
+      "hash": "0",
+      "data": [],
+      "difficulty": 3
+    },
+    {
+      "index": 1,
+      "timestamp": 1714553550488,
+      "previousHash": "0",
+      "hash": "0000491d6bfb20945d5fe1bf9cc649fb29727c524d777abf96e5bba6ca4c3956",
+      "data": {
+        "sender": "Sender",
+        "recipient": "Recipient",
+        "quantity": 10
+      },
+      "difficulty": 4
+    },
+    {
+      "index": 2,
+      "timestamp": 1714553572185,
+      "previousHash": "0000491d6bfb20945d5fe1bf9cc649fb29727c524d777abf96e5bba6ca4c3956",
+      "hash": "000c855cba354b27acb34694ac554f8c9f2fecf6967b77266103dabf483a28ef",
+      "data": {
+        "sender": "Sender",
+        "recipient": "Recipient",
+        "quantity": 10
+      },
+      "difficulty": 3
+    },
+    {
+      "index": 3,
+      "timestamp": 1714553579111,
+      "previousHash": "000c855cba354b27acb34694ac554f8c9f2fecf6967b77266103dabf483a28ef",
+      "hash": "0000a7cf7c87079238345f93ac4e33b6b756167a98c804530230040bc25bc067",
+      "data": {
+        "sender": "Sender",
+        "recipient": "Recipient",
+        "quantity": 10
+      },
+      "difficulty": 4
+    }
+  ]
+}

@@ -1,10 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 import { createBlockchain } from './startup.mjs';
 import blockchainRouter from './routes/blockchain-routes.mjs';
 
 dotenv.config({ path: 'config/config.env' });
+global.__appdir = path.dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 

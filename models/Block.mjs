@@ -5,7 +5,7 @@ const Block = class {
     this.previousHash = previousHash;
     this.hash = hash;
     this.data = data;
-    this.difficulty = difficulty || process.env.DIFFICULTY;
+    this.difficulty = +(difficulty || process.env.DIFFICULTY);
   }
 };
 

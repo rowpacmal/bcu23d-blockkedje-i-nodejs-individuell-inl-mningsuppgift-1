@@ -30,7 +30,7 @@ Räcker med Postman.
 
 ### Inlämningsuppgiften examinerar följande läranderesultat från kursplanen:
 
-- [ ] API-utveckling med Node.js
+- [x] API-utveckling med Node.js
 - [ ] proof-of-work-baserade system
 - [ ] skapa BackEnd Node.JS-servrar, med ett express-API och TDD
 
@@ -38,7 +38,7 @@ Räcker med Postman.
 
 Den studerande har nått samtliga lärandemål för kursen. Den studerande kan dessutom:
 
-- [ ] skapa blockchain-objekt som hanterar komplexa objekt
-- [ ] förstå när du ska använda midleware och använda det på ett korrekt sätt
+- [x] skapa blockchain-objekt som hanterar komplexa objekt
+- [x] förstå när du ska använda midleware och använda det på ett korrekt sätt
 
 Med högre kvalitet än för betyget G.

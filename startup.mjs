@@ -9,17 +9,20 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 let blockchain = require('./data/blockchain.json');
 
-const startup = () => {
-  dotenv.config({ path: 'config/config.env' });
-  global.__appdir = path.dirname(fileURLToPath(import.meta.url));
+dotenv.config({ path: 'config/config.env' });
+global.__appdir = path.dirname(fileURLToPath(import.meta.url));
 
-  if (Object.keys(blockchain).length === 0) {
-    blockchain = new Blockchain();
+const NODE_ENV = process.env.NODE_ENV;
+const PORT = process.env.PORT || 5000;
 
-    new FileHandler('data', 'blockchain.json').write(blockchain);
-  } else {
-    Object.setPrototypeOf(blockchain, Blockchain.prototype);
-  }
-};
+if (Object.keys(blockchain).length === 0) {
+  blockchain = new Blockchain();
 
-export { blockchain, startup };
+  new FileHandler('data', 'blockchain.json').write(blockchain);
+} else {
+  Object.setPrototypeOf(blockchain, Blockchain.prototype);
+}
+
+console.log('startup');
+
+export { blockchain, NODE_ENV, PORT };

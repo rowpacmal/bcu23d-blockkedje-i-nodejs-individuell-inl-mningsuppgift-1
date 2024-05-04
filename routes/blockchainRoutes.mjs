@@ -5,6 +5,7 @@ import {
   getLatestBlock,
   getBlockByIndex,
   mineBlock,
+  synchronizeChain,
 } from '../controllers/blockchainController.mjs';
 
 const router = Router();
@@ -16,5 +17,7 @@ router.route('/blocks/latest').get(getLatestBlock);
 router.route('/blocks/:index').get(getBlockByIndex);
 
 router.route('/mine').post(mineBlock);
+
+router.route('/consensus').get(synchronizeChain);
 
 export default router;

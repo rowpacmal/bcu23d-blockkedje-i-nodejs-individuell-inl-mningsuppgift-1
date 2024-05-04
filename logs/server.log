@@ -1023,3 +1023,616 @@
   "connection": "keep-alive"
 }
   Body: {}
+======
+  Method: POST
+  URL: /api/v1/blockchain/mine
+  Date: 2024-05-04
+  Time: 17:35:30
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "06b1e633-dc28-4c7b-bd93-a10646bac552",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "69"
+}
+  Body: {
+  "from": "Sender",
+  "to": "Recipient",
+  "amount": 10
+}
+======
+  Method: POST
+  URL: /api/v1/blockchain/mine
+  Date: 2024-05-04
+  Time: 17:35:31
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "3f592452-5514-4aa5-b06f-5740342d2d11",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "69"
+}
+  Body: {
+  "from": "Sender",
+  "to": "Recipient",
+  "amount": 10
+}
+======
+  Method: POST
+  URL: /api/v1/blockchain/mine
+  Date: 2024-05-04
+  Time: 17:35:32
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "9bb3231d-01e2-4bd7-b018-a2e175136f99",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "69"
+}
+  Body: {
+  "from": "Sender",
+  "to": "Recipient",
+  "amount": 10
+}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:35:35
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "7c2a4fc8-0ea9-4973-864b-bc2039fe9ad7",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:35:45
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "29357193-60a0-4bc4-ae67-2535a274227e",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:35:49
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "d7c4fff5-8ef4-45fe-9381-dba8d5a43d0f",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:35:50
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:36:16
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "a595d482-1309-49f9-b1d5-6bdd3652da27",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:37:56
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "e9cc35b8-348b-44a4-b5de-5ee001726c92",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:37:57
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "82937716-c002-4653-99f7-45c346081368",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:38:01
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "6d31f0e8-8ced-4770-a53e-500816217cba",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:38:01
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:38:03
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "204613b7-b0e6-42cb-9946-137ecc6d52c2",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:38:03
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:38:05
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "ef2817c7-b5ad-433a-9e01-e2a1a9578c1e",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:38:06
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "8b2e2f8f-3746-4501-9c89-6231659a221c",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:38:48
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "632daed2-3eec-4675-8d21-8c720ddec399",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:38:48
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:39:15
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "b78cfdfb-adb2-464c-b344-71a01be6ed41",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:39:15
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:39:44
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "253d6d2b-452b-48b4-b8d7-ed988ddec2f7",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:39:44
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:39:54
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "85284058-9e98-4965-99ce-7c0e324b7ae8",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:39:56
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "8e0a5310-2b28-4169-b7cd-9385f46f18f8",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:40:25
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "54aa0727-b3b3-4753-ac6b-cecfc57729e6",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:40:25
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:41:41
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "0f3f9b4d-7810-4aa4-a922-c5c406bb2e1b",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:41:43
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "7fb86eb4-77b7-4aba-8ef4-8c30c6a58bc0",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:41:43
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:41:45
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "40561569-0cfb-47bc-96db-a83e1afd4538",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:42:55
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "80247dc2-d8e7-474c-9cd8-bb0b95b229b0",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:42:58
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "74af0061-2942-4c9a-b22a-609ad6c44656",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:43:01
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "ad3d75bc-7405-4a1e-9892-a95218c30bb1",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:43:01
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:43:03
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "1d80bdfd-cc28-4d46-84fe-1f38dc3b0f24",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:43:04
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "5f828fc8-cb84-46b6-9243-802f2f42c5c9",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:43:19
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "916ed4fb-85aa-4e59-981e-b778e03f6d50",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain/consensus
+  Date: 2024-05-04
+  Time: 17:43:45
+  ---
+  Headers: {
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "34dfc216-3b17-4ea8-8f18-6576299e549c",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive"
+}
+  Body: {}
+======
+  Method: GET
+  URL: /api/v1/blockchain
+  Date: 2024-05-04
+  Time: 17:43:45
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate"
+}
+  Body: {}

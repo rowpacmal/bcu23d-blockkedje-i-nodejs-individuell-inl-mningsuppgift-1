@@ -2,9 +2,13 @@ import { createHash } from '../utils/cryptoLib.mjs';
 import Block from './Block.mjs';
 
 const Blockchain = class {
-  constructor() {
+  constructor(name) {
+    this.name = name || 'Blockchain';
     this.chain = [];
     this.createGenesisBlock();
+
+    this.memberNodes = [];
+    this.nodeUrl = process.argv[3];
   }
 
   createGenesisBlock() {
@@ -52,7 +56,8 @@ const Blockchain = class {
     do {
       timestamp = Date.now();
       nonce++;
-      difficulty = this.adjustDifficulty(lastBlock);
+      difficulty = lastBlock.difficulty;
+      // difficulty = this.adjustDifficulty(lastBlock);
       hash = this.hashBlock({ ...block, timestamp, nonce, difficulty });
     } while (!hash.startsWith('0'.repeat(difficulty)));
 

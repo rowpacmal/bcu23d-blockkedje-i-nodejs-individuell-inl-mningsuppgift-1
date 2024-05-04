@@ -5,7 +5,7 @@ import {
   getLatestBlock,
   getBlockByIndex,
   mineBlock,
-} from '../controllers/blockchainControllers.mjs';
+} from '../controllers/blockchainController.mjs';
 
 const router = Router();
 

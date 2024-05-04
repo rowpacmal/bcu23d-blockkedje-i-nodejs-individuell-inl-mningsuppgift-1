@@ -1,7 +1,8 @@
 import { blockchain } from '../startup.mjs';
+
 import ServerResponse from '../utils/ServerResponse.mjs';
-import FileHandler from '../utils/FileHandler.mjs';
 import ErrorResponse from '../utils/ErrorResponse.mjs';
+import FileHandler from '../utils/FileHandler.mjs';
 
 const getBlockchain = (req, res, next) => {
   res.status(200).json(new ServerResponse({ status: 200, data: blockchain }));

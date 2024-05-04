@@ -1,1 +1,18 @@
-{}
+{
+  "name": "Blockchain",
+  "chain": [
+    {
+      "index": 0,
+      "timestamp": 1714835319375,
+      "previousHash": null,
+      "hash": "0",
+      "data": [],
+      "nonce": 0,
+      "difficulty": 2
+    }
+  ],
+  "memberNodes": [
+    "http://localhost:5001"
+  ],
+  "nodeUrl": "http://localhost:5002"
+}

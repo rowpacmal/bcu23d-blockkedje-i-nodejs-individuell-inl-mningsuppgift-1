@@ -1,0 +1,466 @@
+======
+  Success: false
+  Status: 400
+  Error: Node undefined is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:47:35
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "966622b3-93be-4c50-9334-d8d5b45c4257",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:48:00
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "ea807e46-9194-445a-b382-b283284256e7",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:48:08
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "dbc7593e-4674-46a8-b068-087c90cb1996",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:48:09
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "74b60086-839b-4488-b8cc-115bd4c56c37",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5001 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:48:19
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "98182134-e887-4285-9a86-e2aea380fd3d",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5001 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:48:20
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "0f33e805-09a1-4800-970d-c676dca05343",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5001 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 16:48:21
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "45e6bce8-cb86-45be-bd0b-79e5f853a286",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:00:58
+  ---
+  Headers: {
+  "host": "localhost:5002",
+  "connection": "keep-alive",
+  "content-type": "application/json",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate",
+  "content-length": "35"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5001 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:00:58
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "content-type": "application/json",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate",
+  "content-length": "35"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:00:58
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "content-type": "application/json",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate",
+  "content-length": "35"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:01:08
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "fa69b185-074a-494f-b26c-a37f091b930e",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5001 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:01:48
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "29f280a5-631b-4b43-92ea-362feeb5477c",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:02:31
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "df6819ca-9113-4818-9458-92fd0e6bdaf6",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:02:42
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "f84a5c99-c52c-45a1-8bce-438a284f0299",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:02:44
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "0a5f55f0-432e-435a-8cd0-d19cb9297ce4",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:02:49
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "8fcd74ec-5237-4f11-bc2f-1107e7054042",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:02:50
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "2b450fcf-89b6-4e2b-b385-b8493921204f",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:02:54
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "7f5b1b61-b004-4997-a53a-8f41135027f9",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:11:49
+  ---
+  Headers: {
+  "host": "localhost:5002",
+  "connection": "keep-alive",
+  "content-type": "application/json",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate",
+  "content-length": "35"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5001 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:11:49
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "content-type": "application/json",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate",
+  "content-length": "35"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:11:49
+  ---
+  Headers: {
+  "host": "localhost:5001",
+  "connection": "keep-alive",
+  "content-type": "application/json",
+  "accept": "*/*",
+  "accept-language": "*",
+  "sec-fetch-mode": "cors",
+  "user-agent": "node",
+  "accept-encoding": "gzip, deflate",
+  "content-length": "35"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}
+======
+  Success: false
+  Status: 404
+  Error: Cannot use POST on resource at /api/v1/members
+  Date: 2024-05-04
+  Time: 17:12:46
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "dcbb3af9-a3f8-446b-ae2d-2b60e5cbad74",
+  "host": "localhost:5002",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5001"
+}
+======
+  Success: false
+  Status: 400
+  Error: Node http://localhost:5002 is already registered on the Blockchain chain
+  Date: 2024-05-04
+  Time: 17:12:49
+  ---
+  Headers: {
+  "content-type": "application/json",
+  "user-agent": "PostmanRuntime/7.38.0",
+  "accept": "*/*",
+  "postman-token": "246f18d3-dc49-4bf1-ad27-1803e270e17a",
+  "host": "localhost:5001",
+  "accept-encoding": "gzip, deflate, br",
+  "connection": "keep-alive",
+  "content-length": "44"
+}
+  Body: {
+  "nodeUrl": "http://localhost:5002"
+}

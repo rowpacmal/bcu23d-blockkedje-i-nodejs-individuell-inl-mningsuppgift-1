@@ -8,7 +8,7 @@ const FileHandler = class {
 
   append(data) {
     try {
-      appendFileSync(this.pathname, JSON.stringify(data, null, 2), 'utf8');
+      appendFileSync(this.pathname, `${data}\n`, 'utf8');
     } catch (error) {
       throw error;
     }

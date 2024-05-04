@@ -1,11 +1,22 @@
 import { blockchain } from '../startup.mjs';
+import ServerResponse from '../utils/ServerResponse.mjs';
+import FileHandler from '../utils/FileHandler.mjs';
+import ErrorResponse from '../utils/ErrorResponse.mjs';
 
 const getBlockchain = (req, res, next) => {
-  res.json({ data: blockchain });
+  res.status(200).json(new ServerResponse({ status: 200, data: blockchain }));
+};
+
+const getAllBlocks = (req, res, next) => {
+  res
+    .status(200)
+    .json(new ServerResponse({ status: 200, data: blockchain.chain }));
 };
 
 const getLatestBlock = (req, res, next) => {
-  res.json({ data: blockchain.getLastBlock() });
+  res
+    .status(200)
+    .json(new ServerResponse({ status: 200, data: blockchain.getLastBlock() }));
 };
 
 const getBlockByIndex = (req, res, next) => {
@@ -13,23 +24,29 @@ const getBlockByIndex = (req, res, next) => {
   const block = blockchain.chain[index];
 
   if (!block) {
-    res.json({ error: `Cannot find block with index ${index}` });
-    return;
+    return next(
+      new ErrorResponse(`Cannot find block with index ${index}`, 404)
+    );
   }
 
-  res.json({ data: block });
+  res.status(200).json(new ServerResponse({ status: 200, data: block }));
 };
 
 const mineBlock = (req, res, next) => {
   const block = blockchain.proofOfWork(req.body);
 
-  res.json({ data: block });
+  new FileHandler('data', `blockchain-${process.argv[2]}.json`).write(
+    blockchain
+  );
+
+  res.status(201).json(new ServerResponse({ status: 201, data: block }));
 };
 
-const synchronizeChain = (req, rws, next) => {};
+const synchronizeChain = (req, res, next) => {};
 
 export {
   getBlockchain,
+  getAllBlocks,
   getLatestBlock,
   getBlockByIndex,
   mineBlock,

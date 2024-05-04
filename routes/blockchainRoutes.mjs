@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import {
   getBlockchain,
+  getAllBlocks,
   getLatestBlock,
   getBlockByIndex,
   mineBlock,
@@ -9,8 +10,10 @@ import {
 const router = Router();
 
 router.route('/').get(getBlockchain);
-router.route('/latest').get(getLatestBlock);
-router.route('/:index').get(getBlockByIndex);
+
+router.route('/blocks').get(getAllBlocks);
+router.route('/blocks/latest').get(getLatestBlock);
+router.route('/blocks/:index').get(getBlockByIndex);
 
 router.route('/mine').post(mineBlock);
 

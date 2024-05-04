@@ -1,10 +1,8 @@
 import express from 'express';
 
+import { PORT } from './startup.mjs';
 import blockchainRoutes from './routes/blockchainRoutes.mjs';
 
-global.__appdir = '';
-
-const PORT = process.argv[2] || process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());

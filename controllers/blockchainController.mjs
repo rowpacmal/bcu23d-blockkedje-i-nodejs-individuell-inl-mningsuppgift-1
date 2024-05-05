@@ -47,8 +47,19 @@ const mineBlock = (req, res, next) => {
 };
 
 const synchronizeChain = (req, res, next) => {
+  const invalidChains = [];
+  let nodesToCheck = blockchain.memberNodes.length;
   let maxLength = blockchain.chain.length;
-  let longestChain = null;
+  let longestChain = blockchain.chain;
+  let syncCounter = 0;
+
+  if (!blockchain.validateChain(longestChain)) {
+    return next(
+      new ErrorResponse(
+        `The current node ${blockchain.nodeUrl} has been compromised`
+      )
+    );
+  }
 
   try {
     blockchain.memberNodes.forEach(async (member) => {
@@ -62,20 +73,39 @@ const synchronizeChain = (req, res, next) => {
           longestChain = result.data.chain;
         }
 
-        blockchain.chain = longestChain;
-        blockchainJSON.write(blockchain);
+        if (!blockchain.validateChain(longestChain)) {
+          maxLength = blockchain.chain.length;
+          longestChain = blockchain.chain;
+
+          invalidChains.push(result.data.nodeUrl);
+        }
+
+        if (longestChain !== blockchain.chain) {
+          blockchain.chain = longestChain;
+          blockchainJSON.write(blockchain);
+          syncCounter++;
+        }
+
+        nodesToCheck--;
+
+        if (nodesToCheck === 0) {
+          res.status(200).json(
+            new ServerResponse({
+              status: 200,
+              error:
+                invalidChains.length > 0 &&
+                `Node(s) ${invalidChains.join(', ')} has been compromised`,
+              data: {
+                message: `Synchronization completed, [${syncCounter}] change(s) has been made to the current node ${blockchain.nodeUrl}`,
+              },
+            })
+          );
+        }
       }
     });
   } catch (error) {
     return next(new ErrorResponse(error, error.status));
   }
-
-  res.status(200).json(
-    new ServerResponse({
-      status: 200,
-      data: { message: 'Synchronization completed...' },
-    })
-  );
 };
 
 export {

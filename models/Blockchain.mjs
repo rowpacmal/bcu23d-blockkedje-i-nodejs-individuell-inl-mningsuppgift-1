@@ -38,7 +38,7 @@ const Blockchain = class {
       block.index +
       block.timestamp +
       block.previousHash +
-      block.data +
+      JSON.stringify(block.data) +
       block.nonce +
       block.difficulty
     ).toString();
@@ -72,6 +72,19 @@ const Blockchain = class {
     return timestamp + process.env.MINE_RATE > timestamp
       ? +difficulty + 1
       : +difficulty - 1;
+  }
+
+  validateChain(blockchain) {
+    for (let i = 1; i < blockchain.length; i++) {
+      const block = blockchain[i];
+      const previousBlock = blockchain[i - 1];
+      const hash = this.hashBlock(block);
+
+      if (hash !== block.hash) return false;
+      if (block.previousHash !== previousBlock.hash) return false;
+    }
+
+    return true;
   }
 };
 

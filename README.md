@@ -14,7 +14,7 @@ Applikationen ska byggas som ett REST API med endpoints för att kunna skapa blo
 - [x] Loggning av fel ska skrivas till en fysisk fellogg
 - [x] ES6 moduler ska användas istället för CommonJS moduler.
 - [ ] Skapandet av block ska ske test drivet(TDD)
-- [ ] Varje block måste verifieras och valideras(“Proof Of Work”)
+- [x] Varje block måste verifieras och valideras(“Proof Of Work”)
 
 ### Väl godkänt krav
 
@@ -31,8 +31,8 @@ Räcker med Postman.
 ### Inlämningsuppgiften examinerar följande läranderesultat från kursplanen:
 
 - [x] API-utveckling med Node.js
-- [ ] proof-of-work-baserade system
-- [ ] skapa BackEnd Node.JS-servrar, med ett express-API och TDD
+- [x] proof-of-work-baserade system
+- [x] skapa BackEnd Node.JS-servrar, med ett express-API och TDD
 
 ### VG-mål för uppgiften:
 

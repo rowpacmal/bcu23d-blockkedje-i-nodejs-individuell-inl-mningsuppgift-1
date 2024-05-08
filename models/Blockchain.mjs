@@ -25,7 +25,6 @@ const Blockchain = class {
     );
     block.hash = this.hashBlock(block);
 
-    this.chain.push(block);
     return block;
   }
 
@@ -63,6 +62,7 @@ const Blockchain = class {
 
     Object.assign(block, { timestamp, hash, nonce, difficulty });
 
+    this.chain.push(block);
     return block;
   }
 

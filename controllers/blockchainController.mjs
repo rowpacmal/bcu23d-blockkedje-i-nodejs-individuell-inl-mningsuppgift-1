@@ -6,7 +6,9 @@ import FileHandler from '../utils/FileHandler.mjs';
 
 const blockchainJSON = new FileHandler(
   'data',
-  `blockchain-${process.argv[2]}.json`
+  process.argv[2]
+    ? `blockchain-${process.argv[2]}.json`
+    : 'blockchain-test.json'
 );
 
 const getBlockchain = (req, res, next) => {
@@ -39,24 +41,45 @@ const getBlockByIndex = (req, res, next) => {
 };
 
 const mineBlock = (req, res, next) => {
-  const block = blockchain.proofOfWork(req.body);
+  const body = req.body;
+
+  if (!(body instanceof Object && !(body instanceof Array))) {
+    return next(
+      new ErrorResponse(
+        `${JSON.stringify(body)} is not valid data[Object]`,
+        400
+      )
+    );
+  }
+
+  const block = blockchain.proofOfWork(body);
 
   blockchainJSON.write(blockchain);
-
   res.status(201).json(new ServerResponse({ status: 201, data: block }));
 };
 
 const synchronizeChain = (req, res, next) => {
   const invalidChains = [];
   let nodesToCheck = blockchain.memberNodes.length;
+  let syncCounter = 0;
+
   let maxLength = blockchain.chain.length;
   let longestChain = blockchain.chain;
-  let syncCounter = 0;
+
+  if (nodesToCheck === 0) {
+    return next(
+      new ErrorResponse(
+        `The current node ${blockchain.nodeUrl} is not connected to a network`,
+        400
+      )
+    );
+  }
 
   if (!blockchain.validateChain(longestChain)) {
     return next(
       new ErrorResponse(
-        `The current node ${blockchain.nodeUrl} has been compromised`
+        `The current node ${blockchain.nodeUrl} has been compromised`,
+        400
       )
     );
   }
@@ -73,17 +96,17 @@ const synchronizeChain = (req, res, next) => {
           longestChain = result.data.chain;
         }
 
-        if (!blockchain.validateChain(longestChain)) {
-          maxLength = blockchain.chain.length;
-          longestChain = blockchain.chain;
-
-          invalidChains.push(result.data.nodeUrl);
-        }
-
         if (longestChain !== blockchain.chain) {
-          blockchain.chain = longestChain;
-          blockchainJSON.write(blockchain);
-          syncCounter++;
+          if (!blockchain.validateChain(longestChain)) {
+            maxLength = blockchain.chain.length;
+            longestChain = blockchain.chain;
+
+            invalidChains.push(result.data.nodeUrl);
+          } else {
+            blockchain.chain = longestChain;
+            blockchainJSON.write(blockchain);
+            syncCounter++;
+          }
         }
 
         nodesToCheck--;

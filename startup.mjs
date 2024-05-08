@@ -9,10 +9,14 @@ global.__appdir = dirname(fileURLToPath(import.meta.url));
 const setupBlockchain = () => {
   const blockchainJSON = new FileHandler(
     'data',
-    `blockchain-${process.argv[2]}.json`
+    process.argv[2]
+      ? `blockchain-${process.argv[2]}.json`
+      : 'blockchain-test.json'
   );
 
   let blockchain = blockchainJSON.read(true);
+
+  console.log(Object.keys(blockchain));
 
   if (Object.keys(blockchain).length === 0) {
     blockchain = new Blockchain();

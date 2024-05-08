@@ -17,7 +17,9 @@ const errorHandler = (err, req, res, next) => {
 
   res
     .status(err.status)
-    .json(new ServerResponse({ status: err.status, error: err.message }));
+    .json(
+      new ServerResponse({ status: err.status || 500, error: err.message })
+    );
 };
 
 export default errorHandler;

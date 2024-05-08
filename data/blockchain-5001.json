@@ -3,50 +3,11 @@
   "chain": [
     {
       "index": 0,
-      "timestamp": 1714835314639,
+      "timestamp": 1715164182535,
       "previousHash": null,
       "hash": "0",
       "data": [],
-      "nonce": 0,
-      "difficulty": 2
-    },
-    {
-      "index": 1,
-      "timestamp": 1714836930148,
-      "previousHash": "0",
-      "hash": "00ae207f374747fe1604f2da8b9b37437e24f0fbe07d36a29a2c4a986449054a",
-      "data": {
-        "from": "Sender",
-        "to": "Recipient",
-        "amount": 10
-      },
-      "nonce": 24,
-      "difficulty": 2
-    },
-    {
-      "index": 2,
-      "timestamp": 1714836931662,
-      "previousHash": "00ae207f374747fe1604f2da8b9b37437e24f0fbe07d36a29a2c4a986449054a",
-      "hash": "00a9ccd8e8add151f50844fe7ef94a8ab71162befdb8be0a493ebcc086b49c47",
-      "data": {
-        "from": "Sender",
-        "to": "Recipient",
-        "amount": 10
-      },
-      "nonce": 151,
-      "difficulty": 2
-    },
-    {
-      "index": 3,
-      "timestamp": 1714836932695,
-      "previousHash": "00a9ccd8e8add151f50844fe7ef94a8ab71162befdb8be0a493ebcc086b49c47",
-      "hash": "000aa51ec550f86eae2a2bf0e7bfab3a7292e5caa58f2d650f1ef95b3fcc7acb",
-      "data": {
-        "from": "Sender",
-        "to": "Recipient",
-        "amount": 10
-      },
-      "nonce": 115,
+      "nonce": 1024,
       "difficulty": 2
     }
   ],

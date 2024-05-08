@@ -1,4 +1,4 @@
-import { blockchain } from '../startup.mjs';
+import { PORT, blockchain } from '../startup.mjs';
 
 import ServerResponse from '../utils/ServerResponse.mjs';
 import ErrorResponse from '../utils/ErrorResponse.mjs';
@@ -29,9 +29,7 @@ const createNode = (req, res, next) => {
   blockchain.memberNodes.push(node);
   syncMembers(node, next);
 
-  new FileHandler('data', `blockchain-${process.argv[2]}.json`).write(
-    blockchain
-  );
+  new FileHandler('data', `blockchain-${PORT}.json`).write(blockchain);
 
   res.status(201).json(
     new ServerResponse({

@@ -1,19 +1,14 @@
+import { PORT, NODE_URL, MINE_RATE } from '../startup.mjs';
 import { createHash } from '../utils/cryptoLib.mjs';
+import FileHandler from '../utils/FileHandler.mjs';
 import Block from './Block.mjs';
 
 const Blockchain = class {
-  constructor(name) {
+  constructor({ name, chain, memberNodes, nodeUrl }) {
     this.name = name || 'Blockchain';
-    this.chain = [];
-    this.createGenesisBlock();
-
-    this.memberNodes = [];
-    this.nodeUrl = process.argv[3];
-  }
-
-  createGenesisBlock() {
-    const block = new Block(0, Date.now(), null, []);
-    this.chain.push(block);
+    this.chain = chain || [Blockchain.createGenesisBlock()];
+    this.memberNodes = memberNodes || [];
+    this.nodeUrl = nodeUrl || NODE_URL;
   }
 
   createBlock(data) {
@@ -23,7 +18,7 @@ const Blockchain = class {
       this.getLastBlock().hash,
       data
     );
-    block.hash = this.hashBlock(block);
+    block.hash = Blockchain.hashBlock(block);
 
     return block;
   }
@@ -32,7 +27,52 @@ const Blockchain = class {
     return this.chain.at(-1);
   }
 
-  hashBlock(block) {
+  proofOfWork(data) {
+    const lastBlock = this.getLastBlock();
+    const block = this.createBlock(data);
+
+    let difficulty, hash, timestamp;
+    let nonce = 1024;
+
+    do {
+      timestamp = Date.now();
+      nonce++;
+      difficulty = lastBlock.difficulty;
+      difficulty = Blockchain.adjustDifficulty(lastBlock, timestamp);
+      hash = Blockchain.hashBlock({ ...block, timestamp, nonce, difficulty });
+    } while (!hash.startsWith('0'.repeat(difficulty)));
+
+    Object.assign(block, { timestamp, hash, nonce, difficulty });
+
+    this.chain.push(block);
+    return block;
+  }
+
+  static createChain(name) {
+    const blockchainJSON = new FileHandler('data', `blockchain-${PORT}.json`);
+
+    let blockchain = blockchainJSON.read(true);
+
+    if (
+      Object.keys(blockchain).toString() !==
+      Object.keys(new this({})).toString()
+    ) {
+      blockchain = new this({ name });
+
+      blockchainJSON.write(blockchain);
+    } else {
+      blockchain = new this(blockchain);
+    }
+
+    return blockchain;
+  }
+
+  static createGenesisBlock() {
+    const block = new Block(0, Date.now(), null, []);
+    return block;
+  }
+
+  static hashBlock(block) {
     const stringToHash = (
       block.index +
       block.timestamp +
@@ -45,39 +85,26 @@ const Blockchain = class {
     return createHash(stringToHash);
   }
 
-  proofOfWork(data) {
-    const lastBlock = this.getLastBlock();
-    const block = this.createBlock(data);
+  static adjustDifficulty(block, timestamp) {
+    let { difficulty } = block;
 
-    let difficulty, hash, timestamp;
-    let nonce = 0;
+    if (difficulty < 1) return 1;
 
-    do {
-      timestamp = Date.now();
-      nonce++;
-      difficulty = lastBlock.difficulty;
-      // difficulty = this.adjustDifficulty(lastBlock);
-      hash = this.hashBlock({ ...block, timestamp, nonce, difficulty });
-    } while (!hash.startsWith('0'.repeat(difficulty)));
-
-    Object.assign(block, { timestamp, hash, nonce, difficulty });
-
-    this.chain.push(block);
-    return block;
-  }
-
-  adjustDifficulty(block) {
-    let { difficulty, timestamp } = block;
-
-    return timestamp + process.env.MINE_RATE > timestamp
+    return timestamp - block.timestamp > MINE_RATE
       ? +difficulty + 1
       : +difficulty - 1;
   }
 
-  validateChain(blockchain) {
-    for (let i = 1; i < blockchain.length; i++) {
-      const block = blockchain[i];
-      const previousBlock = blockchain[i - 1];
+  static validateChain(chain) {
+    const replacer = ['index', 'previousHash', 'hash', 'data', 'nonce'];
+    const firstBlock = JSON.stringify(chain[0], replacer);
+    const genesisBlock = JSON.stringify(this.createGenesisBlock(), replacer);
+
+    if (firstBlock !== genesisBlock) return false;
+
+    for (let i = 1; i < chain.length; i++) {
+      const block = chain[i];
+      const previousBlock = chain[i - 1];
       const hash = this.hashBlock(block);
 
       if (hash !== block.hash) return false;

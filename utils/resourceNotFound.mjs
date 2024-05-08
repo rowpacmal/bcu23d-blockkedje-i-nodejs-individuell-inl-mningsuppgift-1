@@ -1,4 +1,4 @@
-import ErrorResponse from '../utils/ErrorResponse.mjs';
+import ErrorResponse from './ErrorResponse.mjs';
 
 const resourceNotFound = (req, res, next) => {
   next(

@@ -1,3 +1,5 @@
+import { DIFFICULTY } from '../startup.mjs';
+
 const Block = class {
   constructor(index, timestamp, previousHash, data) {
     this.index = index;
@@ -6,7 +8,7 @@ const Block = class {
     this.hash = '0';
     this.data = data;
     this.nonce = 0;
-    this.difficulty = +process.env.DIFFICULTY || 1;
+    this.difficulty = DIFFICULTY;
   }
 };
 

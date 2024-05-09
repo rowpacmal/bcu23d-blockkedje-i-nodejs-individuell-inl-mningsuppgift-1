@@ -4,7 +4,7 @@
   "description": "I den första inlämningen ska ni skapa en node.js applikation som ska efterlikna en blockkedje applikation. Valet av namn och syfte är upp till er själva.",
   "main": "server.mjs",
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --ui",
     "start": "node --env-file=config/config.env server.mjs",
     "dev": "nodemon --env-file=config/config.env server.mjs 5000 http://localhost:5000",
     "node1": "nodemon --env-file=config/config.env server.mjs 5001 http://localhost:5001",

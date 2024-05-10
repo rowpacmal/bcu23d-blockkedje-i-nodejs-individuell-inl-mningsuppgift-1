@@ -10,6 +10,6 @@ const PORT = +process.argv[2] || +process.env.PORT || 5000;
 const DIFFICULTY = +process.env.DIFFICULTY || 1;
 const MINE_RATE = +process.env.MINE_RATE || 1000;
 
-const blockchain = Blockchain.createChain('GameBlock');
+const blockchain = Blockchain ? Blockchain.createChain('GameBlock') : {};
 
 export { NODE_URL, PORT, DIFFICULTY, MINE_RATE, blockchain };

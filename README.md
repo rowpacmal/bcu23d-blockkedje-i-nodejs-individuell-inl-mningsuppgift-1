@@ -13,7 +13,7 @@ Applikationen ska byggas som ett REST API med endpoints för att kunna skapa blo
 - [x] Blockkedjan ska skrivas till en json fil så att den finns även efter omstart av servern.
 - [x] Loggning av fel ska skrivas till en fysisk fellogg
 - [x] ES6 moduler ska användas istället för CommonJS moduler.
-- [ ] Skapandet av block ska ske test drivet(TDD)
+- [x] Skapandet av block ska ske test drivet(TDD)
 - [x] Varje block måste verifieras och valideras(“Proof Of Work”)
 
 ### Väl godkänt krav

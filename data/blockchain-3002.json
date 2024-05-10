@@ -1,16 +1,16 @@
 {
-  "name": "Blockchain",
+  "name": "GameBlock",
   "chain": [
     {
       "index": 0,
-      "timestamp": 1715241311074,
+      "timestamp": 1715349069138,
       "previousHash": null,
       "hash": "0",
       "data": [],
       "nonce": 0,
-      "difficulty": 1
+      "difficulty": 2
     }
   ],
   "memberNodes": [],
-  "nodeUrl": "http://localhost:5000"
+  "nodeUrl": "http://localhost:3002"
 }

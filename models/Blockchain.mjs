@@ -1,6 +1,5 @@
-import { PORT, NODE_URL, MINE_RATE } from '../startup.mjs';
+import { NODE_URL, MINE_RATE } from '../startup.mjs';
 import { createHash } from '../utils/cryptoLib.mjs';
-import FileHandler from '../utils/FileHandler.mjs';
 import Block from './Block.mjs';
 
 const Blockchain = class {
@@ -48,23 +47,19 @@ const Blockchain = class {
     return block;
   }
 
-  static createChain(name) {
-    const blockchainJSON = new FileHandler('data', `blockchain-${PORT}.json`);
-
-    let blockchain = blockchainJSON.read(true);
+  static createChain(blockchain, name) {
+    let newBlockchain;
 
     if (
       Object.keys(blockchain).toString() !==
       Object.keys(new this({})).toString()
     ) {
-      blockchain = new this({ name });
-
-      blockchainJSON.write(blockchain);
+      newBlockchain = new this({ name });
     } else {
-      blockchain = new this(blockchain);
+      newBlockchain = new this(blockchain);
     }
 
-    return blockchain;
+    return newBlockchain;
   }
 
   static createGenesisBlock() {

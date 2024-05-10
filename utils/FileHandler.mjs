@@ -1,4 +1,4 @@
-import { appendFileSync, readFileSync, writeFileSync } from 'fs';
+import { appendFileSync, readFileSync, writeFileSync, existsSync } from 'fs';
 import { join as joinPath } from 'path';
 
 const FileHandler = class {
@@ -9,6 +9,14 @@ const FileHandler = class {
   append(data) {
     try {
       appendFileSync(this.pathname, `${data}\n`, 'utf8');
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  exists() {
+    try {
+      return existsSync(this.pathname);
     } catch (error) {
       throw error;
     }

@@ -12,7 +12,7 @@ const Blockchain = class {
 
   createBlock(data) {
     const block = new Block(
-      this.chain.length,
+      this.chain.length + 1,
       Date.now(),
       this.getLastBlock().hash,
       data
@@ -63,7 +63,7 @@ const Blockchain = class {
   }
 
   static createGenesisBlock() {
-    const block = new Block(0, Date.now(), null, []);
+    const block = new Block(1, Date.now(), null, []);
     return block;
   }
 

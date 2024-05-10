@@ -9,14 +9,14 @@ describe('Blockchain', () => {
         const properties = ['name', 'chain', 'memberNodes', 'nodeUrl'];
 
         properties.forEach((p) => {
-          expect(Blockchain.createChain()).toHaveProperty(p);
+          expect(Blockchain.createChain({})).toHaveProperty(p);
         });
       });
     });
 
     describe('Has values...', () => {
       it('name and nodeUrl should have a value of string', () => {
-        const blockchain = Blockchain.createChain();
+        const blockchain = Blockchain.createChain({});
         const properties = ['name', 'nodeUrl'];
 
         properties.forEach((p) => {
@@ -25,7 +25,7 @@ describe('Blockchain', () => {
       });
 
       it('chain and memberNodes should have a value of array', () => {
-        const blockchain = Blockchain.createChain();
+        const blockchain = Blockchain.createChain({});
         const properties = ['chain', 'memberNodes'];
 
         properties.forEach((p) => {
@@ -41,14 +41,14 @@ describe('Blockchain', () => {
         const methods = ['createBlock', 'getLastBlock', 'proofOfWork'];
 
         methods.forEach((m) => {
-          expect(Blockchain.createChain()).toHaveProperty(m);
+          expect(Blockchain.createChain({})).toHaveProperty(m);
         });
       });
     });
 
     describe('Has values...', () => {
       it('all should have the value of function', () => {
-        const blockchain = Blockchain.createChain();
+        const blockchain = Blockchain.createChain({});
         const methods = ['createBlock', 'getLastBlock', 'proofOfWork'];
 
         methods.forEach((m) => {
@@ -59,7 +59,7 @@ describe('Blockchain', () => {
 
     describe('createBlock() function', () => {
       it('should return an instance of Block', () => {
-        const blockchain = Blockchain.createChain();
+        const blockchain = Blockchain.createChain({});
 
         expect(blockchain.createBlock({}) instanceof Block).toBeTruthy();
       });

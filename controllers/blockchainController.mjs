@@ -25,7 +25,7 @@ const getLatestBlock = (req, res, next) => {
 
 const getBlockByIndex = (req, res, next) => {
   const index = +req.params.index;
-  const block = blockchain.chain[index];
+  const block = blockchain.chain.find((b) => b.index === index);
 
   if (!block) {
     return next(

@@ -1,0 +1,80 @@
+{
+  "name": "GameBlock",
+  "chain": [
+    {
+      "index": 1,
+      "timestamp": 1715349883820,
+      "previousHash": null,
+      "hash": "0",
+      "data": [],
+      "nonce": 0,
+      "difficulty": 2
+    },
+    {
+      "index": 2,
+      "timestamp": 1715349898415,
+      "previousHash": "0",
+      "hash": "000090ad94da5720690ec78eff9236b7b4384bf14a138dd3075bee0ba45b180b",
+      "data": {
+        "sender": "Sender",
+        "recipient": "Recipient",
+        "amount": 10,
+        "products": [
+          {
+            "name": "Dark Souls: Remastered",
+            "genres": [
+              "Action role-playing"
+            ],
+            "developers": [
+              "FromSoftware"
+            ],
+            "publishers": [
+              "Bandai Namco Entertainment",
+              "JP: FromSoftware"
+            ],
+            "platform": "Windows",
+            "release": "24-05-2018"
+          }
+        ],
+        "timestamp": "01-01-2024"
+      },
+      "nonce": 4793,
+      "difficulty": 3
+    },
+    {
+      "index": 3,
+      "timestamp": 1715350172839,
+      "previousHash": "000090ad94da5720690ec78eff9236b7b4384bf14a138dd3075bee0ba45b180b",
+      "hash": "0000f26938a856d25bcb2ef66fa7d5aacc950d876ee5e5e1ab0f1a3ae74af835",
+      "data": {
+        "sender": "Sender",
+        "recipient": "Recipient",
+        "amount": 10,
+        "products": [
+          {
+            "name": "Dark Souls: Remastered",
+            "genres": [
+              "Action role-playing"
+            ],
+            "developers": [
+              "FromSoftware"
+            ],
+            "publishers": [
+              "Bandai Namco Entertainment",
+              "JP: FromSoftware"
+            ],
+            "platform": "Windows",
+            "release": "24-05-2018"
+          }
+        ],
+        "timestamp": "01-01-2024"
+      },
+      "nonce": 175769,
+      "difficulty": 4
+    }
+  ],
+  "memberNodes": [
+    "http://localhost:3001"
+  ],
+  "nodeUrl": "http://localhost:3002"
+}
